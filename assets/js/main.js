@@ -4,7 +4,7 @@ const boxListWorker = document.querySelector(".box");
 
 
 
-//array di oggeti con dati
+//array di oggetti con dati
 
 const workList = [
     {

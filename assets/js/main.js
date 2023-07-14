@@ -1,6 +1,6 @@
 "use strict"
 
-const boxListWorker = document.querySelector(".box");
+const boxListWorker = document.querySelector(".box-card");
 
 //array di oggetti con dati
 
@@ -50,6 +50,17 @@ for(let i = 0; i < workList.length; i++){
 
     //stampo ogni singola proprietà dell'oggetto e stampo le foto (bonus - 1 )
 
-    boxListWorker.innerHTML += `<span>${singleWorker.name} ${singleWorker.role} <img src="./assets/img/${singleWorker.photo}"></span>`
+    // boxListWorker.innerHTML += `<span>${singleWorker.name} ${singleWorker.role} <img src="./assets/img/${singleWorker.photo}"></span>`
+
+    // style card
+
+    boxListWorker.innerHTML += ` 
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/${singleWorker.photo}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <small class="card-text">${singleWorker.role}</small>
+                <p class="card-text">${singleWorker.name}</p>
+            </div>
+        </div>`
 };
 

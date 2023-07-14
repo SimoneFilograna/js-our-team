@@ -50,7 +50,7 @@ for(let i = 0; i < workList.length; i++){
 
     //stampo ogni singola proprietà dell'oggetto e stampo le foto (bonus - 1 )
 
-    boxListWorker.innerHTML += `<p>${singleWorker.name} ${singleWorker.role} <img src="./assets/img/${singleWorker.photo}"></p>`
+    boxListWorker.innerHTML += `<span>${singleWorker.name} ${singleWorker.role} <img src="./assets/img/${singleWorker.photo}"></span>`
 }
 
 

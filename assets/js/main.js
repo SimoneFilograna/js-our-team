@@ -40,7 +40,7 @@ const workList = [
         role: "Graphic Designer",
         photo: "barbara-ramos-graphic-designer.jpg"
     },
-] 
+];
 
 //stampo in console l'array di gruppi 
 
@@ -51,6 +51,5 @@ for(let i = 0; i < workList.length; i++){
     //stampo ogni singola proprietà dell'oggetto e stampo le foto (bonus - 1 )
 
     boxListWorker.innerHTML += `<span>${singleWorker.name} ${singleWorker.role} <img src="./assets/img/${singleWorker.photo}"></span>`
-}
-
+};
 

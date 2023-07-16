@@ -1,6 +1,20 @@
 "use strict"
 
 const boxListWorker = document.querySelector(".box-card");
+const subBtn = document.getElementById("sub-btn");
+const addBtn = document.getElementById("add-member");
+const emptyForm = document.getElementById("form-empty");
+const userName = document.getElementById("user-name");
+const userRole = document.getElementById("user-role");
+const userPhoto = document.getElementById("user-photo");
+
+
+let userData = {
+    name: "",
+    role: "",
+}
+
+
 
 //array di oggetti con dati
 
@@ -42,6 +56,7 @@ const workList = [
     },
 ];
 
+
 //stampo in console l'array di gruppi 
 
 for(let i = 0; i < workList.length; i++){
@@ -63,4 +78,38 @@ for(let i = 0; i < workList.length; i++){
             </div>
         </div>`
 };
+
+//aggiungo evento al button principale per rendere il form visibile
+
+subBtn.addEventListener("click", function(){
+    userName.value = "";
+    userRole.value = "";
+    emptyForm.classList.toggle("d-none");
+});
+
+
+// aggiungo il nuovo membro all'array
+addBtn.addEventListener("click", function(){
+
+    userData = {
+        name: userName.value,
+        role: userRole.value,
+    }
+
+    console.log(userData)
+    workList.push(userData);
+    boxListWorker.innerHTML += ` 
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.gravatar.com/avatar/HASH> class="card-img-top" alt="...">
+        <div class="card-body">
+            <small class="card-text">${userData.role}</small>
+            <p class="card-text">${userData.name}</p>
+        </div>
+    </div>`
+
+    userName.value = "";
+    userRole.value = "";
+})
+
+
 

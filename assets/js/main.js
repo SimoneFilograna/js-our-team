@@ -73,7 +73,7 @@ for(let i = 0; i < workList.length; i++){
         <div class="card" style="width: 18rem;">
             <img src="./assets/img/${singleWorker.photo}" class="card-img-top" alt="...">
             <div class="card-body">
-                <small class="card-text">${singleWorker.role}</small>
+                <small class="card-text fw-bold">${singleWorker.role}</small>
                 <p class="card-text">${singleWorker.name}</p>
             </div>
         </div>`
@@ -100,9 +100,9 @@ addBtn.addEventListener("click", function(){
     workList.push(userData);
     boxListWorker.innerHTML += ` 
     <div class="card" style="width: 18rem;">
-        <img src="https://www.gravatar.com/avatar/HASH> class="card-img-top" alt="...">
+        <img src="https://loremflickr.com/400/429" class="card-img-top" alt="...">
         <div class="card-body">
-            <small class="card-text">${userData.role}</small>
+            <small class="card-text fw-bold">${userData.role}</small>
             <p class="card-text">${userData.name}</p>
         </div>
     </div>`

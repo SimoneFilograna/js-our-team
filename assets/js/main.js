@@ -109,6 +109,7 @@ addBtn.addEventListener("click", function(){
 
     userName.value = "";
     userRole.value = "";
+    emptyForm.classList.add("d-none")
 })
 
 

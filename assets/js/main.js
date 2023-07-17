@@ -100,7 +100,7 @@ addBtn.addEventListener("click", function(){
     workList.push(userData);
     boxListWorker.innerHTML += ` 
     <div class="card" style="width: 18rem;">
-        <img src="https://loremflickr.com/400/429" class="card-img-top" alt="...">
+        <img src="https://placebeard.it/400/429" class="card-img-top" alt="...">
         <div class="card-body">
             <small class="card-text fw-bold">${userData.role}</small>
             <p class="card-text">${userData.name}</p>
